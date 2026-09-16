@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import Logo from '../components/Logo'
+import { useSeo } from '../lib/useSeo'
 
 export default function NotFound() {
+  useSeo({
+    title: 'Страница не найдена',
+    description: 'Страница не найдена. Возможно, она была перемещена или удалена.',
+    noindex: true,
+  })
+
   return (
     <section className="container-page flex min-h-[70vh] flex-col items-center justify-center text-center">
       <Logo className="h-16 w-16 text-gold-400/40" />

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krasilnikow.github.io/sokol_new/sitemap.xml

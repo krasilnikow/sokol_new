@@ -7,8 +7,14 @@ import CTASection from '../components/CTASection'
 import Kicker from '../components/Kicker'
 import Reveal from '../components/Reveal'
 import { company } from '../data/company'
+import { useSeo } from '../lib/useSeo'
 
 export default function About() {
+  useSeo({
+    title: 'О компании',
+    description: `${company.fullName} — ${company.claim.toLowerCase()} с ${company.since} года. Опытный персонал, индивидуальный подход, лицензии на все виды охранной деятельности.`,
+  })
+
   return (
     <>
       <PageHero

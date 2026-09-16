@@ -4,8 +4,15 @@ import ServiceCard from '../components/ServiceCard'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import { services } from '../data/services'
+import { useSeo } from '../lib/useSeo'
 
 export default function Services() {
+  useSeo({
+    title: 'Услуги',
+    description:
+      'Физическая охрана, видеонаблюдение, охранная и пожарная сигнализация, СКУД — услуги группы компаний «Сокол» в Ярославле. Бесплатный выезд специалиста и расчёт стоимости.',
+  })
+
   return (
     <>
       <PageHero

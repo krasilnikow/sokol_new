@@ -5,8 +5,14 @@ import ContactForm from '../components/ContactForm'
 import Reveal from '../components/Reveal'
 import Kicker from '../components/Kicker'
 import { company } from '../data/company'
+import { useSeo } from '../lib/useSeo'
 
 export default function Contacts() {
+  useSeo({
+    title: 'Контакты',
+    description: `${company.fullName}: ${company.address}. Телефон ${company.phones[0].value}, email ${company.email}. ${company.hours}.`,
+  })
+
   return (
     <>
       <PageHero

@@ -10,8 +10,14 @@ import CTASection from '../components/CTASection'
 import Kicker from '../components/Kicker'
 import Reveal from '../components/Reveal'
 import { services } from '../data/services'
+import { useSeo } from '../lib/useSeo'
 
 export default function Home() {
+  useSeo({
+    description:
+      'ООО ЧОО «Сокол» — физическая охрана, видеонаблюдение, охранная и пожарная сигнализация, СКУД в Ярославле. На рынке охранных услуг с 2004 года.',
+  })
+
   return (
     <>
       <Hero />

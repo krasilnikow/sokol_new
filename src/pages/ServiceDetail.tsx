@@ -7,10 +7,17 @@ import Reveal from '../components/Reveal'
 import { serviceIcons } from '../lib/icons'
 import { services } from '../data/services'
 import { company } from '../data/company'
+import { useSeo } from '../lib/useSeo'
 
 export default function ServiceDetail() {
   const { slug } = useParams()
   const service = services.find((s) => s.slug === slug)
+
+  useSeo({
+    title: service?.title,
+    description: service?.shortDescription ?? 'Услуги группы компаний «Сокол» в Ярославле.',
+    noindex: !service,
+  })
 
   if (!service) return <Navigate to="/uslugi" replace />
 
