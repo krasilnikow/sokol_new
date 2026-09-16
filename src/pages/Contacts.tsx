@@ -33,16 +33,6 @@ export default function Contacts() {
               <ContactInfo />
             </div>
 
-            <Reveal delay={0.2} className="mt-8 overflow-hidden rounded-2xl border border-white/8">
-              <iframe
-                title="Карта — Ярославль, ул. Песочная, 55"
-                src="https://yandex.ru/map-widget/v1/?ll=39.891397%2C57.602812&z=17&pt=39.891397,57.602812,pm2rdl"
-                className="h-80 w-full grayscale invert-[0.92] contrast-[1.05]"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </Reveal>
-
             <div className="mt-8 rounded-2xl border border-white/8 bg-ink-900/40 p-6">
               <div className="text-xs font-bold uppercase tracking-widest text-gold-400">
                 Юридические лица группы
